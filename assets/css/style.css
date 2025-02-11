@@ -4,16 +4,16 @@ html {
     font-family: "poppins, serif";
 }
 
-body{
-    margin: 0;
-}
 
 nav {
-    background-color: lightgrey;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
+  background-color: lightgrey;
+}
+
+.main-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0;
 }
 .navbar-left{
     display: flex;
@@ -29,24 +29,33 @@ nav {
     text-decoration: none;
     background-color: orangered;
     color: white;
+    margin-right: 20px;
     padding: 10px 20px;
     border-radius: 10px;
 }
 
-.main-contet{
-  display: flex;
-  padding: 10px;
-  margin: 50px;
+.mobile-menu{
+  display:none;
+}
+.mobile-menu-list{
+  display: none;
+}
+.hamburger-icon{
+  font-size: 36px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin: 50px;
+}
 /* home */
-.biru {
-  padding: 7px;
-  color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: navy;
-  text-decoration: none;
+#card-section{
+  flex: 1;
 }
 
 .sosmed :hover{
@@ -57,17 +66,16 @@ nav {
 .home {
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
-  margin: 10px;
-  max-width: 400px;
+  padding: 15px;
+  margin: 10px auto;
+  /* max-width: 400px; */
   background-color: white;
   border-radius: 10px;
-  border: 1px lightgray solid;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .home img {
-  width: 400px;
+  width: 100%;
   align-items: center;
 }
 
@@ -80,10 +88,10 @@ nav {
 
 /* introduction */
 #intro {
-  flex: 2.5;
+  flex: 3;
 }
 
-#wid {
+#wid h1 {
   margin-top: 30px;
 }
 
@@ -94,6 +102,10 @@ nav {
 #socials a{
   text-decoration: none;
   margin-right: 20px;
+}
+
+#socials a img{
+  width: 50px;
 }
 
 /* kontak */
@@ -172,7 +184,7 @@ nav {
 }
 
 .blog-item {
-  height: 250px;
+  /* height: 250px; */
   padding: 15px;
   border: 1px solid #aaa;
   border-radius: 15px;
@@ -188,7 +200,7 @@ nav {
 }
 
 .blog-item-img img {
-  height: 100%;
+  height: 300px;
 }
 
 .blog-item-text {
@@ -240,29 +252,75 @@ nav {
 
 
 /* for mobile devices */
-@media (max-width: 768px) {
-/* navbar */
-.navbar-links {
+@media screen and (max-width: 768px) {
+.main-menu{
   display: none;
+  }
+
+  .main-content{
+  display: contents;
 }
-.navbar-right {
-  display: none;
+
+.mobile-menu{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
 }
-.hamburger-container {
+
+.menu-active{
+  background-color: orangered !important;
+  color: white !important;
+}
+.mobile-menu-show{
   display: block;
 }
 
-/* homepage */
-.home-page {
-  flex-direction: column;
-  margin-top: 50px;
-  padding: 0 60px;
+.mobile-menu-hide{
+  display: none;
+}
+.mobile-menu-list a{
+  display: block;
+  font-size: 35px;
+  text-decoration: none;
+  border: 1px white;
+  background-color: #aaa;
+  color: #fff;
+  text-align: center;
 }
 
-.show-menu {
-  display: flex;
+#card-section{
+  padding: 30px;
+}
+
+#introduction {
+  padding: 0 30px 30px;
+}
+
+#teknologi {
   flex-direction: column;
-  gap: 15px;
+}
+
+#teknologi img{
+ width: 40px; 
+}
+  
+#teknologi h2{
+  margin: 5px 0;
+}
+/* contact*/
+.contact-form{
+  width: 90%;
+}
+/* blog page */
+.create-blog-form{
+  width: 90%;
+}
+.blog-item{
+  flex-direction: column;
+}
+.blog-item-img img {
+  height: 100%;
 }
 }
 

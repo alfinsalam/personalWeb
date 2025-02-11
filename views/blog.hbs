@@ -1,21 +1,13 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>blog</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="icon" href="../assets/img/logoweb.jpg" />
   </head>
   <body>
-    <nav>
-      <ul class="navbar-left">
-        <img src="assets/img/logoweb.jpg" alt="logoweb" style="width: 60px" />
-        <li><a href="index.html"> Home </a></li>
-        <li><a href="blog.html"> Blog </a></li>
-        <li><a href="testimonial.html"> Testimonial</a></li>
-      </ul>
-      <a class="navbar-right" href="contact.html">Contact Me</a>
-    </nav>
+{{> navbar}}
     <!-- CREATE BLOG -->
     <form id="create-blog" class="create-blog-form" onsubmit="addBlog(event)">
       <h1>Create Blog</h1>
@@ -46,7 +38,7 @@
     <section id="blogList" class="blog-list">
       <article class="blog-item">
         <div class="blog-item-img">
-          <img src="assets/img/blog-img.png" alt="" />
+          <img src="../assets/img/blog-img.png" alt="" />
         </div>
         <div class="blog-item-text">
           <div class="blog-item-buttons">
@@ -69,8 +61,8 @@
         </div>
       </article>
     </section>
-    {{!--
-    <script src="assets/js/blog.js"></script>
-    --}}
+    {{!
+    <script src="../assets/js/blog.js"></script>
+    }}
   </body>
 </html>

@@ -454,7 +454,7 @@ input[type="file"]:hover {
   color: #e74c3c;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 746px) {
   .container-prview {
     grid-template-columns: repeat(1, 1fr);
   }
