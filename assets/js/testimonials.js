@@ -15,14 +15,14 @@ let testimonials = [
       author: "unkwon",
       rating: 3,
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea reiciendis qui molestias blanditiis inventore reprehenderit nesciunt sequi pariatur quaerat? Error?",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea reiciendis qui molestias blanditiis inventore reprehenderit nesciunt sequi pariatur quaerat? Error Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea reiciendis qui molestias blanditiis inventore reprehenderit nesciunt sequi pariatur quaerat? Error?",
       image: "assets/img/gambar.jpg"
     },
     {
       author: "unkwon",
       rating: 1,
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, commodi obcaecati necessitatibus totam reprehenderit fuga.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, commodi obcaecati necessitatibus totam reprehenderit fuga Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea reiciendis qui molestias blanditiis inventore reprehenderit nesciunt sequi pariatur quaerat Error",
       image: "assets/img/gambar.jpg",
     },
     {
@@ -43,7 +43,7 @@ let testimonials = [
           <div class="card p-3 col mx-0">
               <img src="${testimonial.image}" class="card-img-top" alt="..." />
               <div class="card-body px-0">
-                <div class="overflow-scroll" style="height: 50px">
+                <div class="overflow-scroll" style="max-height: 100px; overflow-y: auto;">
                   <p class="card-text">${testimonial.content}</p>
                 </div>
                 <div class="text-end fw-bold mt-3">
@@ -78,3 +78,4 @@ let testimonials = [
       testimonialsContainer.innerHTML = testimonialsHTML(filteredTestimonial);
     }, 1000);
   }
+  
