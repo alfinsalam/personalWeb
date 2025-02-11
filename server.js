@@ -29,11 +29,9 @@ app.get("/testimonial", (req, res) => {
   res.render("testimonial");
 });
 
-app.get("/:lang/project/:id", (req, res) => {
-  const { id, lang } = req.params;
-  const {name, tittle} = req.query;
-})
-
+app.get("*", (req, res) => {
+  res.send("pages not found 404");
+});
 app.listen(PORT, () => {
   console.log(`server berjalan di ${PORT}`);
 });
