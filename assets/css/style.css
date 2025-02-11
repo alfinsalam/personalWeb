@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    font-family: "poppins, serif";
+}
+
+body{
+    margin: 0;
+}
+
+nav {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+.navbar-left{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+}
+.navbar-left a {
+    text-decoration: none;
+    color: black;
+}
+.navbar-right{
+    text-decoration: none;
+    background-color: orangered;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.main-contet{
+  display: flex;
+  padding: 10px;
+  margin: 50px;
+}
+
+/* home */
+.biru {
+  padding: 7px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: navy;
+  text-decoration: none;
+}
+
+.sosmed :hover{
+  opacity: .7;
+  transform: scale(.85);
+
+}
+.home {
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 10px;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px lightgray solid;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home img {
+  width: 400px;
+  align-items: center;
+}
+
+.profil {
+  width: 100%;
+  font-size: large;
+  border-collapse: collapse;
+
+}
+
+/* introduction */
+#intro {
+  flex: 2.5;
+}
+
+#wid {
+  margin-top: 30px;
+}
+
+#teknologi {
+  display: flex;
+}
+
+#socials a{
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+/* kontak */
+.contact-section {
+    height: 120vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-form {
+    width: 400px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  
+  .form-label {
+    font-size: 18px;
+  }
+  
+  .form-input {
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+    padding: 7px;
+    font-size: 18px;
+  }
+  
+  .form-submit-button {
+    color: white;
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 5px;
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+  /* CREATE BLOG FORM STYLES */
+
+.create-blog-form {
+  width: 500px;
+  margin: 30px auto;
+}
+
+.create-blog-form h1 {
+  text-align: center;
+}
+
+.button-container {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.create-blog-form button {
+  font-size: 16px;
+  font-family: "Poppins", serif;
+  background-color: orangered;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* BLOG LIST STYLES */
+.blog-list {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.blog-item {
+  height: 250px;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 15px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.blog-item-img {
+  align-items: normal;
+  /* background-color: salmon; */
+  /* flex: 4; */
+}
+
+.blog-item-img img {
+  height: 100%;
+}
+
+.blog-item-text {
+  /* background-color: aquamarine; */
+  flex: 1;
+}
+
+.blog-item-buttons {
+  text-align: right;
+}
+
+.blog-edit-button {
+  font-size: 16px;
+  font-family: "Poppins", serif;
+  background-color: #ccc;
+  color: black;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.blog-post-button {
+  font-size: 16px;
+  font-family: "Poppins", serif;
+  background-color: orangered;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.blog-item-relative-time {
+  color: lightgray;
+  padding-right: 20px;
+  font-size: 14px;
+  text-align: right;
+}
+/* BLOG DETAIL STYLES */
+.blog-detail {
+  width: 60%;
+  margin: 40px auto;
+}
+
+.blog-detail img {
+  width: 100%;
+}
+
+
+/* for mobile devices */
+@media (max-width: 768px) {
+/* navbar */
+.navbar-links {
+  display: none;
+}
+.navbar-right {
+  display: none;
+}
+.hamburger-container {
+  display: block;
+}
+
+/* homepage */
+.home-page {
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 0 60px;
+}
+
+.show-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+}
+
