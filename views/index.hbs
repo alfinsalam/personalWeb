@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Web</title>
-    <link rel="icon" href="../assets/img/logoweb.jpg" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-  </head>
-  <body>
-{{> navbar}}
+{{#> layout currentPage='Home'}}
     <main class ="main-content">
       <!-- profile -->
       <section id="card-section">
@@ -116,3 +106,4 @@
      <script src="../assets/js/navbar.js"></script>
   </body>
 </html>
+{{/layout}}

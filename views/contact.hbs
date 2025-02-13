@@ -1,13 +1,4 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Me</title>
-    <link rel="icon" href="assets/img/logoweb.jpg" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-   {{> navbar}}
+{{#>layout currentPage='Contact'}}
     <main class="contact-section">
       <form id="contactForm" class="contact-form">
         <h1>Contact Me</h1>
@@ -80,6 +71,4 @@
         <button type="submit" class="form-submit-button">Submit</button>
       </form>
     </main>
-    <script src="assets/js/submitForm.js"></script>
-  </body>
-</html>
+{{/layout}}

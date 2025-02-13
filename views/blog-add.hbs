@@ -1,0 +1,28 @@
+ {{#> layout currentPage='Blog'}}
+ <!-- CREATE BLOG -->
+    <form id="create-blog" action="/blog-add" method="post" class="create-blog-form">
+      <h1>Create Blog</h1>
+
+      <div class="form-field">
+        <label for="title">title</label>
+        <input name="title" id="title" type="text" required />
+      </div>
+
+      <div class="form-field">
+        <label for="content">content</label>
+        <textarea name="content" id="content" rows="6" required></textarea>
+      </div>
+
+      <div class="form-field">
+        <label for="image">upload image</label>
+        <input name="image" id="image" type="file" required />
+      </div>
+
+      <div class="button-container">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+    <hr style="width: 90%; margin: 0 auto" />
+
+{{/layout}}

@@ -1,12 +1,20 @@
 <nav>
   <div class="main-menu">
     <ul class="navbar-left">
-    <img src="assets/img/logoweb.jpg" alt="logoweb" style="width: 60px" />
-    <li><a href="/index" class="menu-active"> Home </a></li>
-    <li><a href="/blog" > Blog </a></li>
-    <li><a href="/testimonial"> Testimonial</a></li>
+    <img src="../assets/img/logoweb.jpg" alt="logoweb" style="width: 60px" />
+    <li><a class="menu-active {{#if (equal currentPage 'Home')}}
+    active fw-bold
+    {{/if}}" href="/index"> Home </a></li>
+    <li><a class="menu-active {{#if (equal currentPage 'Blog')}}
+    active fw-bold
+    {{/if}}"href="/blog" > Blog </a></li>
+    <li><a  class="menu-active {{#if (equal currentPage 'Testimonial')}}
+    active fw-bold
+    {{/if}}"href="/testimonial"> Testimonial</a></li>
   </ul>
-  <a class="navbar-right" href=" /contact">Contact Me</a>
+  <a class="navbar-right {{#if (equal currentPage 'Home')}}
+    active fw-bold
+    {{/if}}"" href=" /contact">Contact Me</a>
   </div>
   <div class="mobile-menu"> 
     <img src="assets/img/logoweb.jpg" alt="logoweb" style="width: 60px" />

@@ -1,0 +1,34 @@
+{{#> layout currentPage='Blog'}}
+<!-- BLOG LIST -->
+<h1 style="text-align: center;">My Blogs</h1>
+<div style="text-align: right;">
+  <a class="blog-post-button" href="/blog-add">Create Blog</a>
+</div>
+<section id="blogList" class="blog-list">
+  {{#each blogs}}
+  <article class="blog-item">
+    <div class="blog-item-img">
+      <img src="{{this.image}}" alt="" />
+    </div>
+    <div class="blog-item-text">
+      <div class="blog-item-buttons">
+        <button href="/blog-edit/{{@index}}" class="btn btn-primary">Edit Blog</button>
+        <form style="display: inline;" action="/blog/{{@index}}?_method=DELETE" method="post">
+          <button onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger" type="submit">Delete Blog</button>
+        </form>
+      </div>
+      <a href="/blog/{{@index}}" style="text-decoration: none; color:black">
+        <h1 class="blog-list-tittle"> {{this.title}} </h1>
+      </a>
+      <p> {{formatDateToWIB this.postedAt}} | Alfin Abdussalam</p>
+      <p>
+        {{this.content}}
+      </p>
+      <p class="blog-item-relative-time">
+        {{getRelativeTime this.postedAt}}
+      </p>
+    </div>
+  </article>
+  {{/each}}
+</section>
+{{/layout}}
