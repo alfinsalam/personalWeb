@@ -2,19 +2,26 @@
   <div class="main-menu">
     <ul class="navbar-left">
     <img src="../assets/img/logoweb.jpg" alt="logoweb" style="width: 60px" />
+{{!-- home --}}
     <li><a class="menu-active {{#if (equal currentPage 'Home')}}
     active fw-bold
     {{/if}}" href="/index"> Home </a></li>
+{{!-- Blog --}}
     <li><a class="menu-active {{#if (equal currentPage 'Blog')}}
     active fw-bold
-    {{/if}}"href="/blog" > Blog </a></li>
+    {{/if}}"href="/Blog" > Blog </a></li>
+{{!-- testimonial --}}
     <li><a  class="menu-active {{#if (equal currentPage 'Testimonial')}}
     active fw-bold
     {{/if}}"href="/testimonial"> Testimonial</a></li>
   </ul>
+  {{#if user}}
+  <div class="text-end w-100 me-4">Selamat datang, {{user.name}}  </div>
+  {{/if}}
+
   <a class="navbar-right {{#if (equal currentPage 'Home')}}
     active fw-bold
-    {{/if}}"" href=" /contact">Contact Me</a>
+    {{/if}}"" href=" /contact">Contact</a>
   </div>
   <div class="mobile-menu"> 
     <img src="assets/img/logoweb.jpg" alt="logoweb" style="width: 60px" />

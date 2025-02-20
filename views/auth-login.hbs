@@ -1,0 +1,36 @@
+ {{#> layout currentPage='Login'}}
+ <!-- lOGIN -->
+    <form id="create-blog" action="/login" method="post" class="auth-form">
+      <h3 class="mb-4">Welcome back! Please Login</h3>
+
+      <div
+       class="form-field">
+        <label for="email"></label>
+        <input name="email" id="email" type="email" placeholder="email" required />
+      </div>
+
+      <div class="form-field">
+        <label for="password"></label>
+        <input name="password" id="password" type="password" placeholder="password" required />
+      </div>
+
+      {{#if messages.error}}
+      <div class="alert alert-danger" role="alert">
+        {{messages.error}}
+      </div>
+      {{/if}}
+      
+      {{#if messages.success}}
+      <div class="alert alert-success" role="alert">
+        {{messages.success}}
+      </div>
+      {{/if}}
+
+      <div class="text-center mt-4" >
+        <button type="submit">Login</button>
+      </div>
+    </form>
+
+    <hr style="width: 90%; margin: 0 auto" />
+
+{{/layout}}

@@ -1,25 +1,25 @@
  {{#> layout currentPage=' Edit Blog'}}
  <!-- Edit BLOG -->
-    <form id="create-blog" action="/blog-add" method="post" class="create-blog-form">
+    <form id="create-blog" action="/blog-update/{{blog.id}}?__method=PATCH" method="post" class="create-blog-form">
       <h1>Edit Blog</h1>
 
       <div class="form-field">
         <label for="title">title</label>
-        <input name="title" id="title" type="text" placeholder="title" value="{{blog.title}}" />
+        <input name="title" id="title" type="text" placeholder="title" value="{{blog.title}}" required/>
       </div>
 
       <div class="form-field">
         <label for="content">content</label>
-        <textarea name="content" id="content" rows="6" required></textarea>
+        <textarea name="content" placeholder="content" id="content" rows="6" required>{{blog.content}}</textarea>
       </div>
 
       <div class="form-field">
         <label for="image">upload image</label>
-        <input name="image" id="image" type="file" required />
+        <input name="image" id="image" type="file" />
       </div>
 
       <div class="button-container">
-        <button type="submit">Submit</button>
+        <button type="submit">Save</button>
       </div>
     </form>
 

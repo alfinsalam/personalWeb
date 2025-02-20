@@ -1,4 +1,9 @@
 {{#> layout currentPage='Home'}}
+{{#if messages.success}}
+      <div class="alert alert-success mx-5" role="alert">
+        {{messages.success}}
+      </div>
+  {{/if}}
     <main class ="main-content">
       <!-- profile -->
       <section id="card-section">
@@ -12,15 +17,15 @@
           rem magni!
         </p>
         <table class="profil">
-          <tr>
+          <tr style="border-style: solid; text-align: center">
             <th>Pengalaman</th>
             <th>tahun</th>
           </tr>
           <tr>
-            <td style="border-style: solid; text-align: center">
+          <td style="border-style: solid; text-align: center">
               Web Developer
-            </td>
-            <td style="border-style: solid; text-align: center">2025</td>
+          </td>
+          <td style="border-style: solid; text-align: center">2025</td>
           </tr>
         </table>
       </div>

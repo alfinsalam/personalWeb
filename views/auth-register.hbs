@@ -1,0 +1,40 @@
+ {{#> layout currentPage='Register'}}
+ <!-- REGISTER -->
+    <form id="create-blog" action="/register" method="post" class="auth-form">
+      <h1 class="text-center mb-4">Register</h1>
+
+      <div
+       class="form-field">
+        <label for="name"></label>
+        <input name="name" id="name" type="text" placeholder="name" />
+      </div>
+
+      <div
+       class="form-field">
+        <label for="email"></label>
+        <input name="email" id="email" type="email" placeholder="email" required />
+      </div>
+
+      <div class="form-field">
+        <label for="password"></label>
+        <input name="password" id="password" type="password" placeholder="password" required />
+      </div>
+
+      <div
+       class="form-field">
+        <label for="confirmPassword"></label>
+        <input name="confirmPassword" id="confirmPassword" type="password" placeholder="confirm password" required />
+      </div>
+      {{#if error}}
+      <div class="alert alert-danger" role="alert">
+        {{error}}
+      </div>
+      {{/if}}
+      <div class="text-center mt-4" >
+        <button type="submit">Register</button>
+      </div>
+    </form>
+
+    <hr style="width: 90%; margin: 0 auto" />
+
+{{/layout}}
